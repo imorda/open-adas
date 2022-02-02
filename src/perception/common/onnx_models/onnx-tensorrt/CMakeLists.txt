@@ -22,8 +22,6 @@ cmake_minimum_required(VERSION 3.2 FATAL_ERROR)
 # The version of CMake which is not compatible with the old CUDA CMake commands.
 set(CMAKE_VERSION_THRESHOLD "3.15.0")
 
-
-
 if(${CMAKE_VERSION} VERSION_LESS ${CMAKE_VERSION_THRESHOLD})
   project(onnx2trt LANGUAGES CXX C)
 else()

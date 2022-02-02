@@ -123,10 +123,10 @@ if ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "MSVC")
 else()
   # Try and enable C++11. Don't use C++14 because it doesn't work in some
   # configurations.
-  # add_cxx_compiler_flag(-std=c++11)
-  # if (NOT HAVE_CXX_FLAG_STD_CXX11)
-  #   add_cxx_compiler_flag(-std=c++0x)
-  # endif()
+  add_cxx_compiler_flag(-std=c++11)
+  if (NOT HAVE_CXX_FLAG_STD_CXX11)
+    add_cxx_compiler_flag(-std=c++0x)
+  endif()
 
   # Turn compiler warnings up to 11
   add_cxx_compiler_flag(-Wall)

@@ -13,7 +13,7 @@
 #include "NvOnnxParser.h"
 #include "configs/config_object_detection.h"
 #include "ctdet_utils.h"
-#include "NvOnnxParserRuntime.h"
+#include "../onnx-tensorrt/NvOnnxParserRuntime.h"
 
 namespace ctdet
 {

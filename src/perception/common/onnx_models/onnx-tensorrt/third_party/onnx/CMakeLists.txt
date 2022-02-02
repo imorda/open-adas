@@ -50,6 +50,9 @@ if(NOT ONNX_NAMESPACE)
   set(ONNX_NAMESPACE "onnx")
 endif()
 
+find_package(Protobuf REQUIRED)
+include_directories(${PROTOBUF_INCLUDE_DIRS})
+
 if(ONNX_BUILD_TESTS)
   list(APPEND CMAKE_MODULE_PATH ${ONNX_ROOT}/cmake/external)
   include(googletest)

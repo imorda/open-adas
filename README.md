@@ -49,7 +49,7 @@ I created an image of my SD card [here](https://1drv.ms/u/s!Av71xxzl6mYZgdZxDoxD
 
 ```
 sudo apt-get install build-essential
-sudo apt-get install qt5-default qtcreator qt5-doc qt5-doc-html qtbase5-doc-html qtbase5-examples -y
+sudo apt-get install qt5-default qtmultimedia5-dev qtcreator qt5-doc qt5-doc-html qtbase5-doc-html qtbase5-examples -y
 sudo /sbin/ldconfig -v
 ```
 
@@ -80,11 +80,11 @@ https://github.com/protocolbuffers/protobuf
 cd <project directory>
 mkdir build
 cd build
-cmake -DCUDA_INCLUDE_DIRS=/usr/local/cuda-10.2/include ..
-make
+cmake -DCUDA_INCLUDE_DIRS=/usr/local/cuda-10.2/include -DCMAKE_CUDA_COMPILER:PATH=/usr/local/cuda/bin/nvcc ..
+make -j4
 ```
 
-Replace `CUDA_INCLUDE_DIRS` with your own path.
+Replace `CUDA_INCLUDE_DIRS` with your own path, `4` with your number of threads.
 
 - Setup virtual CAN (run once)
 

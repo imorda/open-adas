@@ -31,6 +31,7 @@ SWIG_OPTS = [
 ]
 
 EXTRA_COMPILE_ARGS =  [
+    '-std=c++11',
     '-DUNIX',
     '-D__UNIX',
     '-m64',

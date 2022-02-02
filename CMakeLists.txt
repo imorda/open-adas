@@ -10,7 +10,7 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
 
 # Set GPU architecture. This decides which instruction set will be used for GPU code.
-set(GPU_ARCHS 75)  ## config your GPU_ARCHS,See [here](https://developer.nvidia.com/cuda-gpus) for finding what maximum compute capability your specific GPU supports.
+set(GPU_ARCHS 53)  ## config your GPU_ARCHS,See [here](https://developer.nvidia.com/cuda-gpus) for finding what maximum compute capability your specific GPU supports.
 
 # Setup CMake
 set(CMAKE_BUILD_TYPE Debug)
@@ -47,12 +47,12 @@ include_directories(
     ${CUDA_INCLUDE_DIRS}
     ${OpenCV_INCLUDE_DIRS}
     ${Qt5Widgets_INCLUDES}
-    "/usr/include/x86_64-linux-gnu/qt5/"
-    "/usr/include/x86_64-linux-gnu/qt5/QtCore"
-    "/usr/include/x86_64-linux-gnu/qt5/QtWidgets" 
-    "/usr/include/x86_64-linux-gnu/qt5/QtGui"
-    "/usr/include/x86_64-linux-gnu/qt5/QtMultimedia"
-    "/usr/include/x86_64-linux-gnu/qt5/QtMultimediaWidgets"
+    "/usr/include/aarch64-linux-gnu/qt5/"
+    "/usr/include/aarch64-linux-gnu/qt5/QtCore"
+    "/usr/include/aarch64-linux-gnu/qt5/QtWidgets"
+    "/usr/include/aarch64-linux-gnu/qt5/QtGui"
+    "/usr/include/aarch64-linux-gnu/qt5/QtMultimedia"
+    "/usr/include/aarch64-linux-gnu/qt5/QtMultimediaWidgets"
 )
 
 # We need add -DQT_WIDGETS_LIB when using QtWidgets in Qt 5.
